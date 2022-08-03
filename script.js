@@ -10,8 +10,8 @@ const winner = document.getElementById("winner");
 const loser = document.getElementById("loser");
 
 // SONS
-const audioWin = new Audio("/sounds/winning.wav");
-const audioLoser = new Audio("/sounds/losing.wav");
+const audioWin = new Audio("./sounds/winning.wav");
+const audioLoser = new Audio("./sounds/losing.wav");
 
 // VARIÁVEIS DE ELEMENTOS
 var player1 = "";
@@ -24,14 +24,14 @@ playing.addEventListener("click", () => {
 
 function reset() {
   player1 = document.querySelector('input[name="play"]:checked').value;
-  imgUser.innerHTML = `<img src="/images/${player1}.png">`;
+  imgUser.innerHTML = `<img src="./images/${player1}.png">`;
   imgPc.innerHTML = "";
 }
 function playPc() {
   let opt = ["rock", "paper", "scissor"];
   let num = Math.floor(Math.random() * opt.length);
   player2 = opt[num];
-  imgPc.innerHTML = `<img src="/images/${player2}.png">`;
+  imgPc.innerHTML = `<img src="./images/${player2}.png">`;
   analyze();
 }
 function analyze() {
