@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="game" class="container">
+      <h1>JO KEN PÔ</h1>
+      <div class="bloco">
+        <div class="lable bg-green">USER</div>
+        <div class="lable bg-red">PC</div>
+        <div id="contador" class="placar">0:0</div>
+      </div>
+      <div class="bloco bg-grey selected-image">
+        <div id="user">
+          <img src="/images/rock.png" alt="" />
+        </div>
+        <div id="pc" class="reverse"></div>
+      </div>
+      <h2>Escolha seu movimento</h2>
+      <div class="buttons">
+        <label>
+          <input
+            type="radio"
+            onclick="reset()"
+            name="play"
+            value="rock"
+            checked
+          />
+          <button class="btn"><img src="/images/rock.png" /></button>
+        </label>
+        <label>
+          <input type="radio" onclick="reset()" name="play" value="paper" />
+          <button class="btn"><img src="/images/paper.png" /></button>
+        </label>
+        <label>
+          <input type="radio" onclick="reset()" name="play" value="scissor" />
+          <button class="btn"><img src="/images/scissor.png" /></button>
+        </label>
+      </div>
+      <div class="bloco">
+        <button id="playing" class="btn-play">Jogar</button>
+      </div>
+    </div>
+    <div id="winner" class="container end-screen none">
+      <span>
+        <i class="bx bx-trophy"></i>
+      </span>
+      <h3>Você ganhou!</h3>
+      <button onclick="newGame()">Jogar novamente</button>
+    </div>
+    <div id="loser" class="container end-screen none">
+      <h3>Você perdeu!</h3>
+      <button onclick="newGame()">Jogar novamente</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
